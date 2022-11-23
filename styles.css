@@ -1,21 +1,24 @@
 body {
     font-family: "Roboto", sans-serif;
-    background: #0a1f44;
+    background: url(./assets/fondoWeather.svg);
     color: white;
 }
 
+/* 0a1f44*/
+
 h1 {
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 5rem;
     letter-spacing: 0.02em;
+    padding-top: 2.5rem;
 }
 
 button,
 input {
-  border: none;
-  background: none;
-  outline: none;
-  color: white;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
 }
 
 ul {
@@ -25,8 +28,17 @@ ul {
 input {
     font-size: 2rem;
     height: 40px;
-    padding: 5px 5px 10px;
+    padding: 5px 5px 14px;
     border-bottom: 1px solid;
+    color: rgb(240, 235, 235);
+}
+
+input:active {
+    color: white;
+}
+
+::placeholder {
+    color: rgb(240, 235, 235);
 }
 
 button {
@@ -36,26 +48,27 @@ button {
     padding: 15px 20px;
     margin-left: 15px;
     border-radius: 5px;
-    background: #ff1e42;
+    background: #212021;
 }
-  
+
 button:hover {
-    background: #c3112d;
+    background: #5c5b5c;
 }
 
 .container {
     background-color: white;
+    opacity: 0.6;
     color: #1e2432;
     width: 400px;
     height: 350px;
     border-radius: 20px;
     margin-left: 50px;
-    visibility : hidden;
+    visibility: hidden;
     margin: 50px auto;
 }
 
 .ciudades {
-    padding: 40px 10%; 
+    padding: 40px 10%;
 }
 
 #ciudad {
@@ -76,7 +89,7 @@ sup {
     font-size: 3rem;
 }
 
-.div-temp{
+.div-temp {
     text-align: center;
 }
 
@@ -84,18 +97,146 @@ img {
     width: 4rem;
 }
 
-.div-description{
+.div-description {
     display: flex;
-   align-items: center;
+    align-items: center;
     flex-direction: column;
 }
 
 #descripcion {
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #717681;
+    color: #0e0e0f;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .encabezado {
     text-align: center;
+}
+
+@media only screen and (min-width:301px) and (max-width: 600px) {
+
+    .container {
+        max-width: 80%;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    input {
+        max-width: 60%;
+        font-size: 1.5em;
+        padding: 7px 7px 10px;
+    }
+
+    .div-input {
+        width: 100%;
+    }
+
+    ::placeholder {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 10px 10px;
+        margin-left: 20px;
+    }
+
+    .container {
+        width: 280px;
+        height: 250px;
+    }
+
+    #temperatura {
+        max-width: 70%;
+        font-size: 1.8em;
+    }
+
+    sup {
+        font-size: 1.8rem;
+    }
+
+    .div-temp {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #ciudad {
+        font-size: 1.9rem;
+    }
+
+    #descripcion {
+        font-size: 1rem;
+        margin-top: -1.5rem;
+    }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 960px) {
+
+    h1 {
+        font-size: 3.5em;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    input {
+        max-width: 60%;
+        font-size: 1.8em;
+    }
+
+
+}
+
+@media only screen and (max-width: 300px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    input {
+        max-width: 80%;
+        font-size: 1em;
+        padding-bottom: 0.1em;
+        place-content: 0.2em;
+
+    }
+
+    .div-input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        font-size: 0.7rem;
+        padding: 10px 10px;
+        margin-top: 20px;
+    }
+
+    .container {
+        width: 200px;
+        height: 250px;
+    }
+
+    #temperatura {
+        max-width: 60%;
+        font-size: 1.8em;
+    }
+
+    sup {
+        font-size: 1.5rem;
+    }
+
+    #ciudad {
+        font-size: 1.5rem;
+    }
+
+    #descripcion {
+        font-size: 1rem;
+    }
 }
