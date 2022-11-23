@@ -26,6 +26,7 @@ const cargarCiudad = () => {
     document.querySelector(".container").style.visibility = "visible"
 
     /*Pedido AJAX que carga la informaci[on de la ciudad solicitada por el usuario */
+    const apikey ='f94d56fb56c00ff042750df1700e52fe';
     $.getJSON( `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apikey}&units=metric`,
 
         function (data) {
