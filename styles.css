@@ -46,7 +46,7 @@ button:hover {
 .container {
     background-color: white;
     color: #1e2432;
-    width: 300px;
+    width: 400px;
     height: 350px;
     border-radius: 20px;
     margin-left: 50px;
@@ -61,20 +61,33 @@ button:hover {
 #ciudad {
     font-size: 2rem;
     color: #717681;
+    display: flex;
+    justify-content: center;
 }
 
 #temperatura {
     font-size: 5rem;
     font-weight: bold;
+    padding-right: 0.5rem;
 }
 
 sup {
     font-weight: normal;
-    font-size: 2.5rem;
+    font-size: 3rem;
+}
+
+.div-temp{
+    text-align: center;
 }
 
 img {
     width: 4rem;
+}
+
+.div-description{
+    display: flex;
+   align-items: center;
+    flex-direction: column;
 }
 
 #descripcion {
